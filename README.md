@@ -38,11 +38,14 @@ Creates a new Nest application by cloning `https://github.com/ThomRick/nest-type
 
 ### generate (or `g`)
 #### module
-Example :
-   * `$ nest generate module path/to/<name>`
-   * `$ nest g module path/to/<name>`
-Creates a templated module file :
-   * `src/path/to/<name>/<name>.module.ts`
+Examples :
+   * `$ nest generate module <assetName>` OR `$ nest g module <assetName>`
+   * `$ nest g module <assetName> [moduleName]`
+   * `$ nest g module <assetName> [moduleName1/moduleName2/moduleName3]`
+- Creates a templated module file :
+   * `src/app/modules/<assetName>/<assetName>.module.ts`
+   * `src/app/modules/[moduleName]/modules/<assetName>/<assetName>.module.ts` 
+   * `src/app/modules/[moduleName1]>/modules/[moduleName2]>/modules/[moduleName3]>/modules/<assetName>/<assetName>.module.ts` 
 ```typescript
 @Module({})
 export class NameModule {}
